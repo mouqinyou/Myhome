@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:id="@+id/layout_main_container"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:clipToPadding="true"
+    android:fitsSystemWindows="false">
+
+    <com.myhome.app.views.widget.NoScrollViewPager
+        android:id="@+id/viewPager_main"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/layout_main_bottom"
+        android:layout_alignParentLeft="true"
+        android:layout_gravity="center"
+        android:flipInterval="30"
+        android:persistentDrawingCache="animation"/>
+
+    <View
+        android:id="@+id/view"
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:layout_alignBottom="@+id/viewPager_main"
+        android:layout_alignParentLeft="true"
+        android:background="@color/_d5d5d5"/>
+
+    <LinearLayout
+        android:id="@+id/layout_main_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:background="@color/_ffffff"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:id="@+id/layout_main_0"
+            style="@style/main_bottom_layout_style">
+
+            <ImageView
+                android:id="@+id/imageView_main_0"
+                style="@style/main_bottom_imageview_style"
+                android:src="@mipmap/tab_icon_shouye_pressed"/>
+
+            <TextView
+                android:id="@+id/textView_main_0"
+                style="@style/main_bottom_textview_style"
+                android:text="首页"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/layout_main_1"
+            style="@style/main_bottom_layout_style">
+
+            <ImageView
+                android:id="@+id/imageView_main_1"
+                style="@style/main_bottom_imageview_style"
+                android:src="@mipmap/tab_icon_haoyou_default"/>
+
+            <TextView
+                android:id="@+id/textView_main_1"
+                style="@style/main_bottom_textview_style"
+                android:text="好友"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/layout_main_2"
+            style="@style/main_bottom_layout_style">
+
+            <ImageView
+                android:id="@+id/imageView_main_2"
+                style="@style/main_bottom_imageview_style"
+                android:src="@mipmap/tab_icon_gengduo_default"/>
+
+            <TextView
+                android:id="@+id/textView_main_2"
+                style="@style/main_bottom_textview_style"
+                android:text="个人中心"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/layout_main_3"
+            style="@style/main_bottom_layout_style">
+
+            <ImageView
+                android:id="@+id/imageView_main_3"
+                style="@style/main_bottom_imageview_style"
+                android:src="@mipmap/tab_icon_gerenzhongxin_default"/>
+
+            <TextView
+                android:id="@+id/textView_main_3"
+                style="@style/main_bottom_textview_style"
+                android:text="更多"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+</RelativeLayout>
